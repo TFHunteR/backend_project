@@ -1,0 +1,49 @@
+{
+  "name": "api-service",
+  "version": "1.0.0",
+  "description": "School Management Services",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --setupFiles ./env --detectOpenHandles",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Joseph Samonte(joseph.samonte17@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-tools/merge": "^9.0.0",
+    "@graphql-yoga/plugin-apq": "^2.0.3",
+    "@nestjs/common": "^10.1.3",
+    "@nestjs/jwt": "^10.1.0",
+    "bcrypt": "^5.1.1",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.20.2",
+    "cls-hooked": "^4.2.2",
+    "connect-redis": "^4.0.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "global": "^4.4.0",
+    "graphql": "^16.5.0",
+    "graphql-scalars": "^1.22.2",
+    "graphql-yoga": "^4.0.3",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "mysql2": "^3.9.0",
+    "node-gyp": "^10.0.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "redis": "^2.8.0",
+    "sequelize": "^6.21.4",
+    "twilio": "^4.20.1"
+  },
+  "devDependencies": {
+    "jest": "^29.6.1",
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
