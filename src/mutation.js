@@ -6,8 +6,10 @@ const changeSchoolYearStatus = require('./modules/SchoolYears/changeSchoolYearSt
 const changeSectionStatus = require('./modules/Sections/changeSectionStatus')
 const changeSubjectStatus = require('./modules/Subjects/changeSubjectStatus')
 const createSection = require('./modules/Sections/createSection')
+const deleteSection = require('./modules/Sections/deleteSection')
 const changeUserStatus = require('./modules/Users/changeUserStatus')
 const createSchoolYear = require('./modules/SchoolYears/createSchoolYear')
+const deleteSchoolYear = require('./modules/SchoolYears/deleteSchoolYear')
 const createSubject = require('./modules/Subjects/createSubject')
 const createUser = require('./modules/Users/createUser')
 const enrollStudent = require('./modules/Enrollments/enrollStudent')
@@ -18,6 +20,7 @@ const saveAvatar = require('./modules/Uploads/saveAvatar')
 const saveSubjectQuarterlyGrades = require('./modules/Grades/saveSubjectQuarterlyGrades')
 const uploadFile = require('./modules/Uploads/uploadFile')
 const saveAnnouncement = require('./modules/Announcements/saveAnnouncement')
+const deleteAnnouncement = require('./modules/Announcements/deleteAnnouncement')
 const saveStudentLrn = require('./modules/Users/saveStudentLrn')
 const payStudent = require('./modules/Payments/payStudent')
 
@@ -31,7 +34,9 @@ module.exports = {
   changeSubjectStatus,
   changeUserStatus,
   createSchoolYear,
+  deleteSchoolYear,
   createSection,
+  deleteSection,
   createSubject,
   createUser,
   enrollStudent,
@@ -41,6 +46,7 @@ module.exports = {
   smsSend,
   smsBroadcast,
   saveAnnouncement,
+  deleteAnnouncement,
   saveAvatar,
   saveStudentLrn,
   saveSubjectQuarterlyGrades

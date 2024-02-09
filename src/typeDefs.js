@@ -298,6 +298,11 @@ module.exports = `
     INCOMPLETE
   }
 
+  type DeleteResponse {
+    success: Boolean!
+    message: String
+  }
+
   type Query {
     getAnnouncement(id: ID!): Announcement
     getAnnouncements: [Announcement]
@@ -338,7 +343,9 @@ module.exports = `
     changeUserStatus(id: ID! status: UserStatus! updatedBy: Int): User
     createUser(user: InputUser! createdBy: Int): User
     createSchoolYear(name: String! startDate: String! endDate: String! createdBy: Int): SchoolYear
+    deleteSchoolYear(syId: ID!, userId: ID!): DeleteResponse
     createSection(name: String! gradeLevel: GradeLevels createdBy: Int): Section
+    deleteSection(sectionId: ID!, userId: ID!): DeleteResponse
     createSubject(name: String! gradeLevel: GradeLevels! category: SubjectCategory! createdBy: Int): Subject
     enrollStudent(studentId: ID! schoolYearId: Int! gradeLevel: GradeLevels! paymentType: PaymentType amount: Float! files: File! others: JSON): User
     payStudent(referenceId: ID! others: JSON amount: Float! files: File!): Payment
@@ -346,6 +353,7 @@ module.exports = `
     smsSend(body: String! to: String!): JSON
     smsBroadcast(audience: [RoleCodes] message: String!): TextMessage
     saveAnnouncement(id: ID audience: [RoleCodes!]! message: String!): Announcement
+    deleteAnnouncement(annId: ID!): DeleteResponse
     saveAvatar(userId: ID! fileId: Int!): UserAvatar
     saveStudentLrn(userId: ID! lrnNo: String!): UserProfile
     saveSubjectQuarterlyGrades(
